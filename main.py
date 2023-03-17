@@ -38,6 +38,8 @@ def right_button_autoclick():
 	else:
 		right_button_is_auto_clicking = True
 
+
+#Setting default buttons settings
 keyboard.add_hotkey('z', left_button_autoclick)
 keyboard.add_hotkey('x', right_button_autoclick)
 
@@ -116,6 +118,7 @@ def cps_value():
 		sv.set(str(cps))
 		return
 
+#Configuring the style
 left_click_text = Label(
 	window,
 	text="Left Button click",
@@ -166,7 +169,7 @@ cps_text_input = Entry(
 	justify="center"
 )
 
-#Configuring the elements
+#Configuring the properties
 Grid.rowconfigure(window, 0, weight=1)
 Grid.rowconfigure(window, 1, weight=1)
 Grid.rowconfigure(window, 2, weight=1)
@@ -189,5 +192,6 @@ while True:
 	if right_button_is_auto_clicking and not left_button_wait_for_key and not left_button_is_auto_clicking and not right_button_wait_for_key:
 		pyautogui.PAUSE /= 2
 		mouse.rightClick()
+	#Getting the set cps value
 	cps_value()
 	window.update()
