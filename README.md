@@ -1,2 +1,2 @@
 # MC-Clicker
-A simple minecraft autoclicker
+S simple minecraft autoclicker
